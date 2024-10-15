@@ -3,11 +3,18 @@ package HW1;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Start of Main");
-        // Create an instance of the Pyramid class and call the Output method (see Pyramid.java for more info)
+        var Tale="";
+        Tale=Adlibs.story("Ragnar", 20, "Red");
+        System.out.println(Tale);
 
-        // Create an instance of the Adlibs class and call the story method (see Adlibs.java for more info)
+        System.out.println();
 
-        // Create an instance of the Replace class and call the charReplace method (see Replace.java for more info)
+        Pyramid.Output();
 
+        System.out.println();
+
+        var Zemons ="";
+        Zemons=Replace.charReplace("Lemonade",0,'Z');
+        System.out.println(Zemons);
     }
 }
