@@ -13,6 +13,7 @@ public class MathGames {
     // Example 1: pythagorean(3,4) would return 5
 
 
+
     // 2. Create a method that will calcuate my grade in the class. You can use the grade range as follows
         // A: 100 - 90
         // B:  89 - 80
@@ -45,7 +46,47 @@ public class MathGames {
 
 
     // You can either create a tester class or put your code here
-     public static void main(String[] args){
+     
+    public static double pythag(double a, double b) {
+        double sideA=Math.pow(a,2);
+        double sideB=Math.pow(b,2);
+        double sideC=Math.sqrt(sideA+sideB);
+        return sideC;
+    }
+
+    public static String myGrade(double g) {
+        String finalG="";
         
+        if (g<=60){
+            return finalG=("F");
+        }
+        if(g>60&&g<70){
+            return finalG=("D");
+        }
+        if(g>70&&g<80){
+            return finalG=("C");
+        }
+        if(g>80&&g<90){
+            return finalG=("B");
+            
+        }
+        if(g>=90){
+            return finalG=("A");
+        }
+    else return finalG;    
+    }
+    
+
+    public static double tipper(double total, int people, double percent) {
+        double totally=Math.round(total);
+        double percenter=percent/100;
+        double finalTip= ((totally*percenter)+totally)/people;
+        return finalTip;
+    }
+    
+    public static void main(String[] args){
+        System.out.println(pythag(6,7));
+        System.out.println(myGrade(68));
+        System.out.println(tipper(55.5,3,18));
     }
 }
